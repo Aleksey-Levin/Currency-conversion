@@ -1,0 +1,33 @@
+@import "../base/fonts";
+@import "../helpers/variables";
+@import "../helpers/mixins";
+@import "../helpers/visual";
+@import "../helpers/typography";
+
+h3{
+  margin: 0;
+  padding-bottom: 0.5em;
+}
+
+
+input{
+  @include input();
+  @include textPlain();
+}
+.input{
+  cursor: default;
+}
+.errorText{
+  @include errorText();
+}
+.errorInput{
+  outline-color: $item__state-background--error;
+}
+.headInput{
+  @include textPlain();
+  font-size: $input-headerText-fontSize;
+  color:$input-headerText-color;
+  padding-left: 1.2em;
+  width: 20em;
+  margin: 0;
+}

@@ -1,0 +1,41 @@
+/*
+Придумал систему названия переменных:
+НАЗВАНИЕ__УТОЧНЯЮЩАЯДЕТАЛЬНАЗВАНИЯ-ТИПСВОЙСТВА--СОСТОЯНИЕ
+
+Isn't she lovely?
+*/
+
+$main_background-color: #2543AD;
+
+$background-color: white;
+$sidebar-backgroundColor: rgba(248, 248, 248, 0.46);
+$text__default-color--black: #2B3442;
+$text__default-color--gray: #ADADAD;
+
+$item__state-background--blur: #F3F3F3;
+$item__state-background--error: #DF1717;
+
+// Можно через миксин динамически подгружать нужный цвет
+
+$input-width-patronymic: 281px;
+$input-height-patronymic: 44px;
+
+$input-fontSize: 1.1vw;
+$input-fontWeight: 600;
+$input-font:'SF PRO Display';
+$input-color: #2B3442;
+
+$input-PlaceHolder-fontSize: 1.1vw;
+$input-PlaceHolder-fontWeight: 600;
+$input-PlaceHolder-fontLine: 24px;
+$input-PlaceHolder-font:'SF PRO Display';
+
+
+$input-headerText-fontSize:1.25vw;
+$input-headerText-color:#2543AD;
+
+$input-errorText-fontWeight:600;
+$input-errorText-fontSize:1em;
+$input-errorText-color:#DF1717;
+
+$label-backgroundColor: rgba(100, 111, 206, 0.2);

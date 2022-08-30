@@ -1,0 +1,12 @@
+@import "../base/fonts";
+@import "variables";
+
+@mixin textPlain {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin textHeader {
+    font-family: system-ui;
+    font-weight: bold;
+    color: $text__default-color--black;
+}

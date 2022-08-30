@@ -1,0 +1,35 @@
+@import "variables";
+@import "visual";
+@import "../base/fonts";
+/**
+  @param {number} InputWidth Ширина Инпута
+  @param {number} InputHeight Высота Инпута
+ */
+@mixin input() {
+  width:22em;
+  padding: 1em 2em;
+  background-color: #F3F3F3;
+  border-radius: 0.65em;
+  border: 0;
+  outline-color: #2543AD;
+  outline-width: 3px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+  height: auto;
+  font-size: $input-fontSize;
+  font-weight: $input-fontWeight;
+  color: $input-color;
+  &::placeholder {
+    font-size: $input-PlaceHolder-fontSize;
+    font-weight: $input-PlaceHolder-fontWeight;
+    line-height: $input-PlaceHolder-fontLine;
+    color: $text__default-color--gray;
+  }
+}
+
+@mixin errorText(){
+  color: $input-errorText-color;
+  @include textPlain();
+  font-size: $input-errorText-fontSize;
+  font-weight: $input-errorText-fontWeight;
+  padding-top: 7px;
+}

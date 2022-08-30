@@ -1,0 +1,36 @@
+// Forms
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+}
+
+// Tables
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+td,
+th {
+    padding: 0;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+ul {
+    margin: 0;
+}
+
+button, input {
+    border: 0;
+    -webkit-appearance: none;
+    outline: none;
+    padding: 0;
+}

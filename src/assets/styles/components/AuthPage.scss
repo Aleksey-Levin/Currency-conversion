@@ -1,0 +1,141 @@
+@import "../base/fonts";
+@import "../helpers/variables";
+@import "../helpers/mixins";
+@import "../helpers/visual";
+@import "../helpers/typography";
+
+.AuthPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.AuthPage_leftPart {
+  width: 48%;
+  background-color: $main_background-color;
+  @include textPlain;
+  font-weight: 500;
+  color: white;
+
+  .container {
+    padding: 6vw 4.2vw 0 4.2vw;
+
+    h3 {
+      font-size: 3.7vw;
+      padding-bottom: 2.2vw;
+    }
+
+    p {
+      font-size: 1.4vw;
+    }
+
+  }
+
+}
+
+.AuthPage_rightPart {
+  width: 52%;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    padding-top: 6.2vh;
+
+    img {
+      width: 16vw;
+      display: flex;
+      margin: 0 auto;
+      padding-bottom: 6vw;
+    }
+
+    .Input-container {
+      width: 30em;
+      margin: 0 auto;
+      padding-bottom: 1.9em;
+    }
+
+    .blockCurrencies {
+      &:first-child{
+        padding-bottom: 2.7em;
+      }
+    }
+  }
+}
+
+.checkbox {
+  @include textPlain;
+  width: 40%;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 1em;
+  position: relative;
+  padding-bottom: 6em;
+
+  .input{
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+  }
+
+  .label{
+    padding-left: 2em;
+
+    color: #444;
+    cursor: pointer;
+
+    &:before{
+      content: "";
+      display: block;
+      width: 1em;
+      height: 1em;
+
+      background-color: $label-backgroundColor;
+      border-radius: 3px;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      transition: background .1s linear, border .1s linear;
+    }
+
+    &:after{
+      content: "";
+      display: block;
+      width: 1em;
+      height: 1em;
+
+      opacity: 0;
+
+      position: absolute;
+      top: 0.1em;
+      left: 0.21em;
+      z-index: 2;
+
+      transition: opacity .1s linear;
+    }
+  }
+  .input:checked + .label:before {
+    background-color: $main_background-color;
+  }
+  .input:checked + .label:after {
+    opacity: 1;
+  }
+}
+.blockCurrencies{
+  display: flex;
+  align-items: center;
+}
+.errorText{
+  @include errorText();
+  padding-top: 2em;
+}
